@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container form-group mt-5">
+        <div class="row">
+            <div class="col-6 mb-2">
+                <label for="">Email</label>
+                <input class="form-control" type="text" name="" id="email" placeholder="Enter email">
+                <small id="email-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Password</label>
+                <input class="form-control" type="text" name="" id="password" placeholder="Password">
+                <small id="password-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Mobile Number</label>
+                <input class="form-control" type="text" name="" id="mobileNumber" placeholder="Mobile number">
+                <small id="mobile-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Pan Number</label>
+                <input class="form-control" type="text" name="" id="panNumber" placeholder="Pan number">
+                <small id="pan-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Zip Code</label>
+                <input class="form-control" type="text" name="" id="zipCode" placeholder="Zip code">
+                <small id="zip-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Date</label>
+                <input class="form-control" type="text" name="" id="date" placeholder="Enter date">
+                <small id="date-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Website</label>
+                <input class="form-control" type="text" name="" id="website" placeholder="Website">
+                <small id="website-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">First Name</label>
+                <input class="form-control" type="text" name="" id="firstName" placeholder="first name">
+                <small id="firstname-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Number</label>
+                <input class="form-control" type="text" name="" id="number" placeholder="Enter a number">
+                <small id="number-text"></small>
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Address</label>
+                <input class="form-control" type="text" name="" id="address" placeholder="3/0 chickent street.....">
+                <small id="address-text"></small>
+            </div>
+        </div>
+        <button type="button" id="validate-button" class="btn btn-primary m-auto mt-2"
+            onclick="validateForm()">Validate</button>
+        <p id="result"></p>
+
+    </div>
+
+    <script src="validateForm.js"></script>
+    <script src="validateAll.js"></script>
+</body>
+
+</html>
