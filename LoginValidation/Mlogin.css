@@ -1,0 +1,28 @@
+.password-field{
+    position: relative;
+}
+.fa-eye, .fa-eye-slash{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+}
+
+/* input:focus ~ label{
+    top: -50px;
+    left: 0;
+} */
+/* .form-group {
+    position: relative;
+}
+  
+.form label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    pointer-events: none;
+}
+
+input:focus{
+    top: -6px;
+    left: 0;
+} */
