@@ -1,0 +1,39 @@
+.wrapper{
+    width: 100%;
+}
+.sidebar{
+    width: 270px;
+}
+.horizontal-bar{
+    width: calc(100% - 270px);
+    height: 65px;
+}
+.topline{
+    height: 65px;
+}
+.topicon{
+    width: 40px;
+}
+.topleftarrow{
+    width: 15%;
+    height: 90%;
+    margin-left: 70px;
+}
+.toprightarrow:hover{
+    cursor: pointer;
+}
+.topleftarrow:hover{
+    cursor: pointer;
+    background-color: #afd2fa;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}
+li:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+    color: rgb(3, 20, 248);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
