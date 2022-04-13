@@ -36,7 +36,7 @@ function validate()
                 else
                 {
                     localStorage.setItem("accessToken", JSON.stringify(Object.values(data)[0]));
-                    window.location.replace('/project-M/projectM.html');
+                    window.location.replace('../html/dashboard.html');
                     console.log("Access token :", Object.values(data)[0]);
                 }
             })
