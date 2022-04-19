@@ -1,0 +1,19 @@
+.rows-per-page {
+    margin-bottom: 5px;
+}
+.searchbar{
+    width: 200px;
+    border:none;
+    outline: none;
+}
+.hr{
+    margin-top: -1px;
+}
+.imagesize{
+    height: 32px;
+    padding-bottom: 12px;
+}
+button{
+    width: 40px;
+    height: 35px;
+}
