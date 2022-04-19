@@ -21,7 +21,6 @@
     width: calc(100% - 270px);
     position: absolute;
     left: 270px;
-    
 }
 .actual-content{
     height: calc(100% - 65px);

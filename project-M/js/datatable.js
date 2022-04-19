@@ -1,14 +1,14 @@
 // specify the columns
 const columnDefs = [
-    {headerName:"Date", field: "date", sortable: true, filter: true, resizable:true, wrapText: true, autoHeight:true },
+    {headerName:"Date", field: "date", sortable: true, filter: true, resizable:true},
     {headerName:"Name", field: "name", sortable: true, filter: true, width:250 },
     {headerName:"Mobile No", field: "mobile", sortable: true, filter: true },
     {headerName:"Current Location", field: "location", sortable: true, filter: true },
     {headerName:"Notice", field: "notice_period", sortable: true, filter: true },
     {headerName:"Exp CTC", field: "ectc", sortable: true, filter: true },
     {headerName:"Current CTC", field: "cctc", sortable: true, filter: true },
-    {headerName:"Primary Skill", field: "primary_skill", sortable: true, filter: true, 
-        resizable:true, wrapText: true, autoHeight:true },
+    {headerName:"Primary Skill", field: "primary_skill", sortable: true, filter: true, resizable:true },
+    // wrapText: true, autoHeight:true
     {headerName:"Status", field: "status", sortable: true, filter: true },
     {
         headerName:"Comments",
