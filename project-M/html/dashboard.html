@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,55 +19,141 @@
     <link rel="stylesheet" href="..//css/datatable.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
+
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <title>PROJECT-M2</title>
 </head>
 
 <body>
     <section class="wrapper d-flex flex-row">
+
+
         <div id="sidemenu" class="sidebar"></div>
+
         <div class="page-content d-flex flex-column">
 
             <div id="hmenu" class="horizontal-bar bg-blue d-flex align-items-center justify-content-end"></div>
 
+            <div class="profile-menu d-flex justify-content-between">
+
+                <div class="leftprofile d-flex flex-row ml-4">
+                    <div class="leftimage d-flex align-items-center mr-2">
+                        <img class="jobsimage" src="jobicon.svg" alt="">
+                    </div>
+                    <div class="d-flex flex-column" style="margin-top: 10px;">
+                        <text class="proftoptext">Profiles</text>
+                        <text class="profbottomtext">Profile List</text>
+                    </div>
+                </div>
+
+                <div class="rightprofile d-flex align-items-center mr-4">
+                    <button type="button" class="d-flex align-items-center py-1 bg-blue">
+                        <text class="profiletext">ADD PROFILE</text>
+                    </button>
+                    <button type="button" class="d-flex align-items-center py-1 bg-blue">
+                        <img src="../html/up-arrow.png" class="rounded-circle bg-light mr-1" alt=""
+                            style="height: 20px;">
+                        <text class="profiletext">UPLOAD BUNK PROFILES</text>
+                    </button>
+                </div>
+            </div>
+
             <div id="bodycontent" class="actual-content">
-                <div class="d-flex justify-content-between mb-2">
+
+                <div class="d-flex justify-content-between mt-3 mb-2">
+
                     <div class="rows-per-page ml-2">
-                        <label for="">Rows per Page :</label>
-                        <select onchange="onPageSizeChanged()" id="page-size">
-                            <option value="5" selected>5</option>
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="75">75</option>
-                            <option value="100">100</option>
-                        </select>
+                        <text>Rows per Page :<text>
+                                <select onchange="onPageSizeChanged()" id="page-size">
+                                    <option value="5" selected>5</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                    <option value="100">100</option>
+                                </select>
                     </div>
-                    <div>
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="filter-text-box" class="searchbar" oninput="onFilterTextBoxChanged()" >
-                        <hr class="hr">
-                    </div>
-                    
-                    <!-- <div class="">
-                        <select id="chkveg" multiple="multiple">
-                            <option value="cheese">Cheese</option>
+
+                    <div class="select-div">
+                        <!-- <select id="chkveg" class="select-class">
+                            <option>Date,Name,Mobile No,Email,Curent Company,Current Location,Job
+                                Location,Notice,Exp CTC,Current CTC,Primary Skill,Secondary Skill,Status,Comments,JD
+                                Chat,Round,Interviewer,Interview Date,Details,Actions</option>
                             <option value="tomatoes">Tomatoes</option>
                             <option value="mozarellaxt">Mozzarella</option>
                             <option value="mushrooms">Mushrooms</option>
                             <option value="pepperoni">Pepperoni</option>
                             <option value="onions">Onions</option>
-                        </select>
-                        <input class="mr-2" type="search" placeholder="Search" aria-label="Search">
-                    </div> -->
+                        </select> -->
+                        <!-- <div class="dropdown show">
+                            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <text>Date,Name</text>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" checked="check">
+                                    <span class="mark"></span>
+                                    Date</a>
+                                <a class="dropdown-item" href="#">Name</a>
+                                <a class="dropdown-item" href="#">Mobile No</a>
+                                <a class="dropdown-item" href="#">Email</a>
+                                <a class="dropdown-item" href="#">Current Company</a>
+                                <a class="dropdown-item" href="#">Current Location</a>
+                                <a class="dropdown-item" href="#">Job Location</a>
+                                <a class="dropdown-item" href="#">Notice</a>
+                                <a class="dropdown-item" href="#">Exp CTC</a>
+                                <a class="dropdown-item" href="#">Current CTC</a>
+                                <a class="dropdown-item" href="#">Primary Skill</a>
+                                <a class="dropdown-item" href="#">Secondary Skill</a>
+                                <a class="dropdown-item" href="#">Status</a>
+                                <a class="dropdown-item" href="#">Comments</a>
+                                <a class="dropdown-item" href="#">JD Chat</a>
+                                <a class="dropdown-item" href="#">Round</a>
+                                <a class="dropdown-item" href="#">Interviewer</a>
+                                <a class="dropdown-item" href="#">Interview Date</a>
+                                <a class="dropdown-item" href="#">Details</a>
+                                <a class="dropdown-item" href="#">Actions</a>
+                            </div>
+                        </div> -->
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button"
+                                data-toggle="dropdown">Dropdown Example
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="searchdiv">
+                        <i class="fas fa-search searchicon"></i>
+                        <input type="text" id="filter-text-box" class="searchbar" oninput="onFilterTextBoxChanged()">
+                    </div>
+
+
                 </div>
                 <div id="myGrid" class="ag-theme-alpine" style="width:100%; height: 100vh;"></div>
             </div>
         </div>
     </section>
-    
+
     <script src="../js/dashboard.js"></script>
     <script src="..//js/datatable.js"></script>
 </body>

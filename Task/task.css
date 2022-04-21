@@ -1,0 +1,45 @@
+.itemsdiv{
+    width: 100%;
+    background-color: #e8e8e8;
+}
+.products{
+    width: 95%;
+    background-color: #d3d3d3;
+}
+.product{
+    width: 18%;
+    position: relative;
+    background-color: #d3d3d3;
+    box-shadow: 0px 0px 10px rgb(7, 7, 12);
+}
+.productimage{
+    width: 100%;
+    height: 300px;
+}
+.offer{
+    position: absolute;
+    left: 10px;
+    width: 70px;
+    background-color: rgb(226, 61, 61);
+}
+.description{
+    display:block;
+    height: 50px;
+    overflow-y: hidden;
+}
+.reviews{
+    position: relative;
+    top: 6px;
+}
+.openbrace{
+    position: absolute;
+    right: -7px;
+}
+.closebrace{
+    position: absolute;
+    left: 12px;
+}
+.reviewcount{
+    position: absolute;
+    bottom: 10px;
+}

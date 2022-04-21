@@ -8,7 +8,7 @@ const columnDefs = [
     {headerName:"Exp CTC", field: "ectc", sortable: true, filter: true },
     {headerName:"Current CTC", field: "cctc", sortable: true, filter: true },
     {headerName:"Primary Skill", field: "primary_skill", sortable: true, filter: true, resizable:true },
-    // wrapText: true, autoHeight:true
+    // wrapText: true, autoHeight:true, hide:true
     {headerName:"Status", field: "status", sortable: true, filter: true },
     {
         headerName:"Comments",
@@ -26,14 +26,14 @@ const columnDefs = [
     {
         headerName:"Actions",
         cellRenderer: function(){
-            var actions = '<button type="button"><img src="document.png" class="imagesize" alt=""></button>'+
-            '<button type="button"><img src="edit.png" class="imagesize" alt=""></button>'+
-            '<button type="button"><img src="assign.png" class="imagesize" alt=""></button>'+
-            '<button type="button"><img src="reassign.png" class="imagesize" alt=""></button>'+
-            '<button type="button"><img src="hand.png" class="imagesize" alt=""></button>'
+            var actions = '<button type="button" class="actionbutton"><img src="document.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="edit.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="assign.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="reassign.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton1"><img src="hand.png" class="imagesize" alt=""></button>'
             return actions;
         },
-        width:250
+        width:400
     },
 ];
 
@@ -48,14 +48,12 @@ const gridOptions = {
 };
 
 function onFilterTextBoxChanged() {
-    console.log("AAAAA");
-    gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
+    gridOptions.api.setQuickFilter(document.getElementById("searchbox").value);
 }
 
 function onPageSizeChanged() {
     var value = document.getElementById("page-size").value;
     gridOptions.api.paginationSetPageSize(Number(value));
-    console.log(value);
 }
 
 // lookup the container we want the Grid to use

@@ -1,21 +1,46 @@
 .rows-per-page {
     margin-bottom: 5px;
 }
+.searchdiv{
+    position: relative;
+}
+.searchicon{
+    position: absolute;
+    top: 5px;
+}
 .searchbar{
     width: 200px;
     border:none;
+    border-bottom:1px solid black;
     outline: none;
+    text-indent: 20px;
 }
 .hr{
     margin-top: -1px;
 }
 .imagesize{
-    height: 32px;
-    padding-bottom: 12px;
+    height: 31px;
+    padding-bottom: 8px;
 }
-button{
+.actionbutton{
     width: 40px;
-    height: 35px;
+    height: 39px;
+    border: 1px solid black;
+    border-right: none;
+    background: white;
+}
+.actionbutton1{
+    width: 40px;
+    height: 39px;
+    border: 1px solid black;
+    background: white;
+}
+.actionbutton:hover, .actionbutton1:hover{
+    background: #f0f0f0;
+}
+.actionbutton:active, .actionbutton1:active{
+    background-color: #d3d3d3;
+    border: 2px solid black;
 }
 .ag-header-cell {
     font-size: 15px;
