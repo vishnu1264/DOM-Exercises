@@ -26,11 +26,11 @@ const columnDefs = [
     {
         headerName:"Actions",
         cellRenderer: function(){
-            var actions = '<button type="button" class="actionbutton"><img src="document.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton"><img src="edit.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton"><img src="assign.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton"><img src="reassign.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton1"><img src="hand.png" class="imagesize" alt=""></button>'
+            var actions = '<button type="button" class="actionbutton"><img src="..//images/document.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="..//images/edit.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="..//images/assign.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton"><img src="..//images/reassign.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton1"><img src="..//images/hand.png" class="imagesize" alt=""></button>'
             return actions;
         },
         width:400

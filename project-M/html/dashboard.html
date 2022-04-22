@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/fontawesome/css/brands.css">
     <link rel="stylesheet" href="..//css/datatable.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
 
@@ -39,7 +39,6 @@
 <body>
     <section class="wrapper d-flex flex-row">
 
-
         <div id="sidemenu" class="sidebar"></div>
 
         <div class="page-content d-flex flex-column">
@@ -50,7 +49,7 @@
 
                 <div class="leftprofile d-flex flex-row ml-4">
                     <div class="leftimage d-flex align-items-center mr-2">
-                        <img class="jobsimage" src="jobicon.svg" alt="">
+                        <img class="jobsimage" src="..//images/jobicon.svg" alt="">
                     </div>
                     <div class="d-flex flex-column" style="margin-top: 10px;">
                         <text class="proftoptext">Profiles</text>
@@ -63,7 +62,7 @@
                         <text class="profiletext">ADD PROFILE</text>
                     </button>
                     <button type="button" class="d-flex align-items-center py-1 bg-blue">
-                        <img src="../html/up-arrow.png" class="rounded-circle bg-light mr-1" alt=""
+                        <img src="../images/up-arrow.png" class="rounded-circle bg-light mr-1" alt=""
                             style="height: 20px;">
                         <text class="profiletext">UPLOAD BUNK PROFILES</text>
                     </button>
@@ -87,58 +86,56 @@
                     </div>
 
                     <div class="select-div">
-                        <!-- <select id="chkveg" class="select-class">
-                            <option>Date,Name,Mobile No,Email,Curent Company,Current Location,Job
-                                Location,Notice,Exp CTC,Current CTC,Primary Skill,Secondary Skill,Status,Comments,JD
-                                Chat,Round,Interviewer,Interview Date,Details,Actions</option>
-                            <option value="tomatoes">Tomatoes</option>
-                            <option value="mozarellaxt">Mozzarella</option>
-                            <option value="mushrooms">Mushrooms</option>
-                            <option value="pepperoni">Pepperoni</option>
-                            <option value="onions">Onions</option>
-                        </select> -->
-                        <!-- <div class="dropdown show">
+                        <div class="dropdown show">
+
                             <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <text>Date,Name</text>
+                                <text>Date,Name,MobileNo,Email...</text>
                             </a>
 
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-menu multiselect" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="#">
-                                    <input type="checkbox" checked="check">
-                                    <span class="mark"></span>
-                                    Date</a>
-                                <a class="dropdown-item" href="#">Name</a>
-                                <a class="dropdown-item" href="#">Mobile No</a>
-                                <a class="dropdown-item" href="#">Email</a>
-                                <a class="dropdown-item" href="#">Current Company</a>
-                                <a class="dropdown-item" href="#">Current Location</a>
-                                <a class="dropdown-item" href="#">Job Location</a>
-                                <a class="dropdown-item" href="#">Notice</a>
-                                <a class="dropdown-item" href="#">Exp CTC</a>
-                                <a class="dropdown-item" href="#">Current CTC</a>
-                                <a class="dropdown-item" href="#">Primary Skill</a>
-                                <a class="dropdown-item" href="#">Secondary Skill</a>
-                                <a class="dropdown-item" href="#">Status</a>
-                                <a class="dropdown-item" href="#">Comments</a>
-                                <a class="dropdown-item" href="#">JD Chat</a>
-                                <a class="dropdown-item" href="#">Round</a>
-                                <a class="dropdown-item" href="#">Interviewer</a>
-                                <a class="dropdown-item" href="#">Interview Date</a>
-                                <a class="dropdown-item" href="#">Details</a>
-                                <a class="dropdown-item" href="#">Actions</a>
+                                    <input type="checkbox" class="checkbox" checked="check">Date</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Name</a>
+                                <a class="dropdown-item py-2" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Mobile No</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Email</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Current Company</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Current Location</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Job Location</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Notice</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Exp CTC</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Current CTC</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Primary Skill</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Secondary Skill</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Status</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Comments</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">JD Chat</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Round</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Interviewer</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Interview Date</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Details</a>
+                                <a class="dropdown-item" href="#">
+                                    <input type="checkbox" class="checkbox" checked="check">Actions</a>
                             </div>
-                        </div> -->
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button"
-                                data-toggle="dropdown">Dropdown Example
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
+
                         </div>
                     </div>
 

@@ -1,7 +1,6 @@
 $(function(){
     $("#hmenu").load("header.html");
     $("#sidemenu").load("sidebar.html");
-    // $("#bodycontent").load("datatable.html");
 });
 
 // fetch("datatable.html")
