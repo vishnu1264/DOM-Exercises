@@ -1,9 +1,4 @@
-fetch('https://mocki.io/v1/46351079-0933-4329-978b-8d1fc3ec6c69')
-    .then(response => response.json())
-    .then(data =>{
-        console.log(data);
-
-        var product = 
+var product = 
             '<div class="product d-flex flex-column">\
                 <span class="offer">\
                     <text class="text-light">25% off</text>\
@@ -25,16 +20,17 @@ fetch('https://mocki.io/v1/46351079-0933-4329-978b-8d1fc3ec6c69')
                             <text class="rating"></text>\
                             <img class="pb-1" src="star.png" alt="" style="height: 17px;">\
                         </div>\
-                        <div class="reviews">\
-                            <img class="openbrace" src="open-bracket.png" alt="" style="height: 20px;">\
-                            <text class="reviewcount" class="reviews"></text>\
-                            <img class="closebrace" src="close-bracket.png" alt="" style="height: 20px;">\
+                        <div class="reviews mt-1">\
+                            (<text class="reviewcount" class="reviews"></text>)\
                         </div>\
                     </div>\
                 </div>\
             </div>';
 
-        var company=[], rating=[], desc=[], image=[], price=[], reviews=[];
+fetch('https://mocki.io/v1/46351079-0933-4329-978b-8d1fc3ec6c69')
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data);
 
         var allImages = document.getElementsByClassName("productimage");
         var allNames = document.getElementsByClassName("companyname");

@@ -27,19 +27,3 @@
     height: 50px;
     overflow-y: hidden;
 }
-.reviews{
-    position: relative;
-    top: 6px;
-}
-.openbrace{
-    position: absolute;
-    right: -7px;
-}
-.closebrace{
-    position: absolute;
-    left: 12px;
-}
-.reviewcount{
-    position: absolute;
-    bottom: 10px;
-}

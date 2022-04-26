@@ -15,8 +15,22 @@ $(function(){
 if(localStorage.getItem("accessToken") == null)
     window.location.href = "../html/Mlogin.html";
 
-function signout()
-{
+function signout() {
     window.location.href = "../html/Mlogin.html";
     localStorage.clear();
 }
+
+function addProfiles() {
+    window.location.href = "../html/addprofile.html"
+}
+function profileSection() {
+    window.location.href = "../html/dashboard.html"
+}
+
+function openFile()
+{
+    var inputFile = document.getElementsByClassName("uploadinput").value;
+    console.log("file :",inputFile);
+    document.getElementById("input-file").src = inputFile;
+}
+
