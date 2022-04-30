@@ -33,4 +33,3 @@ function openFile()
     console.log("file :",inputFile);
     document.getElementById("input-file").src = inputFile;
 }
-

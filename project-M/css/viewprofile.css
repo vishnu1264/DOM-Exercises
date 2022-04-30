@@ -22,19 +22,22 @@
     width: 100%;
     height: calc(100vh - 140px);
     padding: 20px;
-    background-color: #d8d8d8;
-    /* box-shadow: 0 0 5px #d3d3d3; */
+    box-shadow: 0 0 5px #d3d3d3;
 }
 
 
-/* Profiles top left CSS */
+/* Profiles horizontal menu CSS */
 
 .profile-menu{
     height: 75px;
     box-shadow: 5px 3px 8px #888888;
 }
 .leftprofile{
+    width: 30%;
     position: relative;
+}
+.rightprofile{
+    width: 55%;
 }
 .leftimage{
     height: 55px;
@@ -57,8 +60,21 @@
 .profbottomtext{
     font-size: medium;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     color: rgb(84, 65, 151);
+}
+.profiletext{
+    color: white;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.right-profile-button{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.right-profile-button:active{
+    background-color: rgb(18, 111, 197);
 }
 .profiletext{
     color: white;
@@ -69,7 +85,6 @@
 
 
 /* Side-bar CSS */
-
 
 
 .topline{
@@ -107,3 +122,81 @@ li:hover {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
+
+/* Main content CSS */
+
+
+
+.profile-details{
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 0px 0px 5px #d3d3d3;
+}
+.input-section{
+    width: 35%;
+    height: 100%;
+    overflow-y: auto;
+}
+.right-section{
+    width: 65%;
+    height: 100%;
+    overflow-y: auto;
+}
+.profile-inputs{
+    border: none;
+    outline: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #b8b8b8;
+}
+::placeholder {
+    font-weight: 100;
+}
+.right-section text{
+    color: rgb(109, 105, 105);
+    font-size: 22px;
+    font-weight: 550;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+/* CSS for Job details section */
+
+.jobdetails-section{
+    width: 90%;
+    height: fit-content;
+}
+.job-details{
+    width: 95%;
+}
+
+
+/* CSS for comments section */
+
+
+.comments-section{
+    width: 90%;
+    margin-left: 50px;
+}
+.right-section hr{
+    margin: 0px!important ;
+    border: 1px solid black;
+}
+.each-comment{
+    width: 100%;
+}
+.left-comments{
+    width: 35%;
+}
+.right-comments{
+    width: 50%;
+}
+.verticalline{
+    height: calc(100% + 10px);
+    border-left: 3px solid #989898;
+}
+

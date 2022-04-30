@@ -3,11 +3,15 @@ const columnDefs = [
     {headerName:"Date", field: "date", sortable: true, filter: true, resizable:true},
     {headerName:"Name", field: "name", sortable: true, filter: true, width:250 },
     {headerName:"Mobile No", field: "mobile", sortable: true, filter: true },
+    {headerName:"Email", field: "email", sortable: true, filter: true },
+    {headerName:"Current Company", field: "working_at", sortable: true, filter: true },
     {headerName:"Current Location", field: "location", sortable: true, filter: true },
+    {headerName:"Job Location", field: "job_location", sortable: true, filter: true },
     {headerName:"Notice", field: "notice_period", sortable: true, filter: true },
     {headerName:"Exp CTC", field: "ectc", sortable: true, filter: true },
     {headerName:"Current CTC", field: "cctc", sortable: true, filter: true },
     {headerName:"Primary Skill", field: "primary_skill", sortable: true, filter: true, resizable:true },
+    {headerName:"Secondary Skill", field: "secondary_skill", sortable: true, filter: true },
     // wrapText: true, autoHeight:true, hide:true
     {headerName:"Status", field: "status", sortable: true, filter: true },
     {
@@ -22,15 +26,15 @@ const columnDefs = [
     {headerName:"Round", field: "round", sortable: true, filter: true },
     {headerName:"Interviewer", field: "interviewer", sortable: true, filter: true },
     {headerName:"Interview Date", field: "interview_date", sortable: true, filter: true },
-    {headerName:"Details", field: "email", sortable: true, filter: true },
+    {headerName:"Details", field: "profile_url", sortable: true, filter: true },
     {
         headerName:"Actions",
         cellRenderer: function(){
-            var actions = '<button type="button" class="actionbutton" title="View"><img src="..//images/document.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton" title="Schedule"><img src="..//images/edit.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton" title="ReSchedule"><img src="..//images/assign.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton" title="Archive"><img src="..//images/reassign.png" class="imagesize" alt=""></button>'+
-            '<button type="button" class="actionbutton1" title="Add Comments"><img src="..//images/hand.png" class="imagesize" alt=""></button>'
+            var actions = '<button type="button" class="actionbutton" title="View"><img src="..//images/docum.png" class="imagesize" alt="" onclick="getSelectedRowData()"></button>'+
+            '<button type="button" class="actionbutton" title="Schedule"><img src="../images/schedule-button.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton" title="ReSchedule"><img src="..//images/reschedule.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton" title="Archive"><img src="..//images/archive.png" class="imagesize" alt=""></button>'+
+            '<button type="button" class="actionbutton1" title="Add Comments"><img src="..//images/addcomments.png" class="imagesize" alt=""></button>'
             return actions;
         },
         width:400
@@ -39,13 +43,15 @@ const columnDefs = [
 
 const gridOptions = {
     columnDefs: columnDefs,
-    rowSelection: 'multiple',
+    rowSelection: 'single',
     pagination: true,
     // cacheBlockSize: 10,
     paginationPageSize: 5,
     cacheQuickFilter:true,
     // paginationAutoPageSize=true
 };
+
+// document.querySelector('#getSelectedRowData').addEventListener('click', getSelectedRowData);
 
 function onFilterTextBoxChanged() {
     gridOptions.api.setQuickFilter(document.getElementById("searchbox").value);
@@ -70,6 +76,13 @@ agGrid.simpleHttpRequest({
     gridOptions.api.setRowData(data);
     console.log(data);
 })
+
+function getSelectedRowData() {
+    var selectedNodes = gridOptions.api.getSelectedNodes();
+    var selectedData = JSON.stringify(selectedNodes.map(node => node.data));
+    localStorage.setItem("profileData", selectedData);
+    window.location.href = "../html/viewprofile.html";
+}
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const gridDiv = document.querySelector('#myGrid');

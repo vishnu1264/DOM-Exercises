@@ -1,66 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .vl {
+            border-left: 6px solid green;
+            height: 500px;
+        }
+    </style>
 </head>
-<style>
-    /* Basics */
-
-    label, input {
-        color: #333;
-        font: 14px/20px Arial;
-    }
-
-    label {
-        display: inline-block;
-        width: 5em;
-        padding: 0 1em;
-        text-align: right;
-    }
-
-    /* Hide the file input using
-opacity */
-    [type=file] {
-        position: absolute;
-        filter: alpha(opacity=0);
-        opacity: 0;
-    }
-
-    input,
-    [type=file]+label {
-        border: 1px solid #CCC;
-        border-radius: 3px;
-        text-align: left;
-        padding: 10px;
-        width: 150px;
-        margin: 0;
-        left: 0;
-        position: relative;
-    }
-
-    [type=file]+label {
-        text-align: center;
-        left: 7.35em;
-        top: 0.5em;
-        /* Decorative */
-        background: rgb(23, 20, 160);
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-
-    [type=file]+label:hover {
-        background-color: blue;
-    }
-</style>
 
 <body>
-    <input id="f02" type="file">
-    <label for="f02">UPLOAD RESUME</label>
+
+    <h2>Vertical Line</h2>
+
+    <div class="vl"></div>
+
 </body>
 
 </html>

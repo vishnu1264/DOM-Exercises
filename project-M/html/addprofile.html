@@ -23,10 +23,12 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> -->
+    <script src="https://cdn.ckeditor.com/4.18.0/standard-all/ckeditor.js"></script>
     <script src="/js/ckeditor/ckeditor.js"></script>
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/addprofile.js"></script>
+    
     <title>Add Profile</title>
 </head>
 
@@ -51,14 +53,15 @@
 
                 <div class="addp-topline d-flex align-items-center justify-content-between bg-white mb-1 py-3 px-3">
                     <text style="color:rgb(29, 54, 199); font-size: x-large;">Add Profile</text>
+                    <div class="btn btn-primary" onclick="saveProfile()">SAVE PROFILE</div>
                     <!-- <input type="file" id="uploadfile" class=""> -->
-                    <input id="f02" class="uploadinput" type="file">
-                    <label for="f02" class="uploadlabel" title="Please upload .pdf or .docx files only"><b>UPLOAD
+                    <input id="myPdf" class="uploadinput" type="file" onclick="hideFiletext()">
+                    <label for="myPdf" class="uploadlabel" title="Please upload .pdf or .docx files only"><b>UPLOAD
                             RESUME</b></label>
                     <!-- <button class="btn btn-primary" title="Please upload .pdf or .docx files only">UPLOAD
                         RESUME</button> -->
                 </div>
-                <div class="btn btn-primary" onclick="saveProfile()">SAVE PROFILE</div>
+                
                 <div class="profile-details d-flex flex-row px-3 pt-4">
                     
                     <div class="input-section d-flex flex-column">
@@ -81,23 +84,50 @@
                         <text class="mb-3" style="font-weight: 280; font-size: small;">Note: Please add ',' seperated
                             skills here.</text>
                     </div>
+
                     <div class="file-section d-flex flex-column justify-content-center align-items-center">
-                        <!-- <embed type="image/jpg" src="../images/unsplash.png" width="300" height="200"> -->
-                        <div class="parse-resume d-flex flex-column p-4 mb-1 text-center">
-                            <text style="font-weight: 300;">Parse</text>
-                            <text style="font-weight: 300;">Resume</text>
+                        <!-- <div id="hide-text">
+                            <div class="parse-resume d-flex flex-column p-4 mb-1 text-center">
+                                <text style="font-weight: 300;">Parse</text>
+                                <text style="font-weight: 300;">Resume</text>
+                            </div>
+                            <text style="font-weight: 300;">Preview will be loaded after the successful upload</text>
+                        </div> -->
+                        <div class="file-view">
+                            <canvas id="pdfViewer" ></canvas>
                         </div>
-                        <text style="font-weight: 300;">Preview will be loaded after the successful upload</text>
                     </div>
+
                 </div>
             </div>
-        </div>
 
     </section>
 
     <script src="/js/ckeditor/ckeditor.js"></script>
-    <script>CKEDITOR.replace('richeditor')</script>
-    <script>CKEDITOR.replace('richeditor2')</script>
+    <script>CKEDITOR.replace('richeditor',{
+        fullPage: true,
+            extraPlugins: 'editorplaceholder',
+            editorplaceholder: 'Education details',
+            // Disable content filtering because if you use full page mode, you probably
+            // want to  freely enter any HTML content in source mode without any limitations.
+            allowedContent: true,
+            removeButtons: 'PasteFromWord',
+            placeholder:'some value'
+
+    })</script>
+    <script>CKEDITOR.replace('richeditor2', {
+        fullPage: true,
+            extraPlugins: 'editorplaceholder',
+            editorplaceholder: 'Work experience',
+            // Disable content filtering because if you use full page mode, you probably
+            // want to  freely enter any HTML content in source mode without any limitations.
+            allowedContent: true,
+            removeButtons: 'PasteFromWord',
+            placeholder:'some value'
+    })</script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/addprofile.js"></script>
+    <script src="../js/datatable.js"></script>
 </body>
 
 </html>
